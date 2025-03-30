@@ -33,7 +33,7 @@
       <template #footer>
         <div class="flex justify-between">
           <UButton to="/welcome">Назад</UButton>
-          <UButton to="/" color="green">Начать игру</UButton>
+          <UButton to="/">Начать игру</UButton>
         </div>
       </template>
     </UCard>
