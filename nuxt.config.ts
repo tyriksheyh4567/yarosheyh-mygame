@@ -9,7 +9,18 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    '@nuxthub/core'
+  ],
+
+  nitro: [
+    experimental: {
+      openAPI: true,
+    },
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true,
+    }
   ],
 
   css: ['~/assets/css/main.css'],
