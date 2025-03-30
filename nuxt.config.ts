@@ -13,21 +13,31 @@ export default defineNuxtConfig({
     '@nuxthub/core'
   ],
 
-  nitro: [
-    experimental: {
-      openAPI: true,
-    },
-    prerender: {
-      routes: ['/'],
-      crawlLinks: true,
-    }
-  ],
-
   css: ['~/assets/css/main.css'],
 
   future: {
     compatibilityVersion: 4
   },
 
-  compatibilityDate: '2025-03-30'
+  compatibilityDate: '2025-03-30',
+  
+  // Add NuxtHub OpenAPI configuration
+  nuxthub: {
+    openapi: {
+      path: '/api/openapi.json', // Path where OpenAPI schema will be available
+      info: {
+        title: 'Svoya Igra API',
+        version: '1.0.0',
+        description: 'API for Svoya Igra application'
+      }
+    }
+  },
+  
+  // Enable prerendering for all pages
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/']
+    }
+  }
 })
