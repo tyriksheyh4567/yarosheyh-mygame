@@ -1,7 +1,5 @@
 <template>
   <UApp>
-    <PageTransition>
-      <NuxtPage />
-    </PageTransition>
+    <NuxtPage />
   </UApp>
 </template>
