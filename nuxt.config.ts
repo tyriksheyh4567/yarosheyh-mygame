@@ -34,10 +34,5 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
-  },
-  
-  // Make sure your plugin is loaded
-  plugins: [
-    '~/plugins/transitions.js'
-  ],
+  }
 })
