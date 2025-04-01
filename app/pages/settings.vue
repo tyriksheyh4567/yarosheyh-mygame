@@ -34,7 +34,7 @@
     </UCard>
     
     <div class="flex justify-between">
-      <UButton color="gray" to="/">Назад</UButton>
+      <UButton color="gray" to="/game">Назад</UButton>
       <UButton color="green" @click="saveSettings">Сохранить настройки</UButton>
     </div>
   </div>
@@ -61,6 +61,6 @@ function removePlayer(index) {
 
 function saveSettings() {
   // Your save logic here
-  navigateTo('/');
+  navigateTo('/game');
 }
 </script>

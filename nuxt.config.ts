@@ -1,6 +1,16 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'game',
+        path: '/game',
+        component: resolve(__dirname, 'app/pages/game.vue')
+      });
+    }
+  },
 
   modules: [
     '@nuxt/ui',

@@ -32,8 +32,8 @@
       
       <template #footer>
         <div class="flex justify-between">
-          <UButton to="/welcome">Назад</UButton>
-          <UButton to="/">Начать игру</UButton>
+          <UButton to="/">Назад</UButton>
+          <UButton to="/game">Начать игру</UButton>
         </div>
       </template>
     </UCard>
