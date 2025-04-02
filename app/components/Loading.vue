@@ -1,12 +1,16 @@
 <template>
   <div class="loading-screen">
-    <div class="loader"></div>
+    <div class="cradle">
+      <div v-for="(ball, index) in balls" :key="index" class="ball" :style="{ animationDelay: `${index * 0.2}s`, transform: `scale(${ball.scale})` }"></div>
+    </div>
     <p class="loading-text">Loading...</p>
   </div>
 </template>
 
 <script setup>
-// You can add any necessary logic here
+const balls = Array.from({ length: 6 }, (_, index) => ({
+  scale: index === 0 ? 1.5 : 1 - index * 0.1 // Adjust the scale for each ball
+}));
 </script>
 
 <style scoped>
@@ -16,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* Light background */
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,23 +28,34 @@
   z-index: 9999;
 }
 
-.loader {
-  border: 8px solid #f3f3f3; /* Light grey */
-  border-top: 8px solid #3498db; /* Blue */
+.cradle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100px; /* Adjust height as needed */
+}
+
+.ball {
+  width: 30px;
+  height: 30px;
+  background-color: #3498db; /* Ball color */
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+  margin: 0 5px;
+  animation: bounce 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
 
 .loading-text {
   margin-top: 20px;
   font-size: 1.5rem;
-  color: #3498db; /* Match the color of the spinner */
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  color: #3498db;
 }
 </style>
