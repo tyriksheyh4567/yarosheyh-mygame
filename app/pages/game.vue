@@ -41,7 +41,7 @@
         
         <template #footer>
           <div class="flex flex-col gap-4">
-            <UButton @click="showAnswer" :disabled="answerRevealed">Показать ответ</UButton>
+            <UButton :disabled="answerRevealed" @click="showAnswer">Показать ответ</UButton>
             <div v-if="answerRevealed" class="text-lg font-bold p-4 bg-gray-100 rounded">
               Ответ: {{ currentQuestion?.answer }}
             </div>
