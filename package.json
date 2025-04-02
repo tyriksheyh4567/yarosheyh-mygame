@@ -12,7 +12,6 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@cloudflare/puppeteer": "^0.0.15",
     "@iconify-json/lucide": "^1.2.33",
     "@iconify-json/simple-icons": "^1.2.29",
     "@nuxt/fonts": "0.11.0",
