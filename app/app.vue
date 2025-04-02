@@ -11,7 +11,7 @@ import { UApp } from '#components';
 import { ref } from 'vue';
 import Loading from '~/components/Loading.vue';
 
-const isLoading = ref(false);
+const isLoading = ref(true);
 
 // Simulate loading state for demonstration
 setTimeout(() => {
