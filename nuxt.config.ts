@@ -1,16 +1,5 @@
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'game',
-        path: '/game',
-        component: resolve(__dirname, 'app/pages/game.vue')
-      });
-    }
-  },
 
   modules: [
     '@nuxt/ui',
@@ -29,7 +18,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
-  compatibilityDate: '2025-03-30',
+  compatibilityDate: '2025-04-02',
   
   // Enable prerendering for all pages
   nitro: {
@@ -44,5 +33,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
+  hub: {
+    database: true,
+    browser: true
   }
 })
