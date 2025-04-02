@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   hub: {
-    database: true
+    database: true,
+    browser: false
   }
 })
