@@ -1,15 +1,28 @@
+<!-- svoya_igra/public/noscript.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No JavaScript</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Store the current URL before redirecting to the noscript page
+        localStorage.setItem('lastVisited', document.referrer);
+    </script>
 </head>
 <body>
     <div class="noscript-container">
         <h1>JavaScript is Disabled</h1>
         <p>This application requires JavaScript to function properly. Please enable JavaScript in your browser settings.</p>
+        <p>If you enable JavaScript, you will be redirected back to your previous page.</p>
     </div>
+    <script>
+        // Redirect back to the last visited page if JavaScript is enabled
+        const lastVisited = localStorage.getItem('lastVisited');
+        if (lastVisited) {
+            window.location.href = lastVisited;
+        }
+    </script>
 </body>
 </html>
