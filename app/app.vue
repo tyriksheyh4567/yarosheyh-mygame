@@ -1,8 +1,10 @@
 <!-- svoya_igra/app/app.vue -->
 <template>
   <UApp>
-    <Loading v-if="isLoading" />
     <NuxtPage />
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/noscript.html" />
+    </noscript>
   </UApp>
 </template>
 
