@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4
   },
 
-  compatibilityDate: '2025-04-02',
+  compatibilityDate: '2025-04-03',
   
   // Enable prerendering for all pages
   nitro: {
@@ -36,5 +36,6 @@ export default defineNuxtConfig({
   },
   hub: {
     database: true
-  }
+  },
+  
 })
