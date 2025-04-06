@@ -5,7 +5,7 @@
 Make sure to install the dependencies:
 
 ```bash
-pnpm install
+pnpm i
 ```
 
 ## Development Server
@@ -13,7 +13,7 @@ pnpm install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-pnpm run dev
+pnpm dev
 ```
 
 ## Production
@@ -21,7 +21,7 @@ pnpm run dev
 Build the application for production:
 
 ```bash
-pnpm run build
+pnpm build
 ```
 
 Locally preview production build:
