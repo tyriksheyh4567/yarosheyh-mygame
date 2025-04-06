@@ -24,7 +24,7 @@ Build the application for production:
 pnpm build
 ```
 
-Link the application to NuxtHub
+Link the application to NuxtHub:
 ```bash
 pnpx nuxthub link
 ```
