@@ -7,8 +7,8 @@
       
       <div class="space-y-4 py-4">
         <UButton block to="/game" size="xl">Начать игру</UButton>
-        <UButton block to="/settings" size="xl" color="gray">Настройки</UButton>
-        <UButton block to="/rules" size="xl" color="blue">Правила</UButton>
+        <UButton block to="/settings" size="xl">Настройки</UButton>
+        <UButton block to="/rules" size="xl">Правила</UButton>
       </div>
     </UCard>
   </div>
