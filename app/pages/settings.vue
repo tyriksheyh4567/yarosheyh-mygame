@@ -60,7 +60,33 @@ function removePlayer(index) {
 }
 
 function saveSettings() {
-  // Your save logic here
+  // Save players data
+  localStorage.setItem('gamePlayers', JSON.stringify(players.value));
+  
+  // Save other settings if needed
+  const settings = {
+    sampleAnswer: sampleAnswer.value,
+    // Add other settings here
+    lastSaved: new Date().toISOString()
+  };
+  localStorage.setItem('gameSettings', JSON.stringify(settings));
+  
+  // Navigate to game page
   navigateTo('/game');
 }
+
+// Load saved settings on component mount
+onMounted(() => {
+  const savedPlayers = localStorage.getItem('gamePlayers');
+  if (savedPlayers) {
+    players.value = JSON.parse(savedPlayers);
+  }
+  
+  const savedSettings = localStorage.getItem('gameSettings');
+  if (savedSettings) {
+    const settings = JSON.parse(savedSettings);
+    sampleAnswer.value = settings.sampleAnswer;
+    // Load other settings here
+  }
+});
 </script>
